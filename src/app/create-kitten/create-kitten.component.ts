@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 import { Kitten } from '../models/kitten';
 
 @Component({
@@ -20,10 +21,9 @@ export class CreateKittenComponent implements OnInit {
 
   CreateKitten(): void {
     this.sendKittenToParent.emit(this.newKitten);
+    this.newKitten = { name:"", race:"", dateOfBirth: new Date, photo:"",}
   }
 
-
-  constructor() { }
 
   onSubmit() {
 
