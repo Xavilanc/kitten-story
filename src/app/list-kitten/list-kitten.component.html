@@ -1,13 +1,15 @@
-<app-create-kitten
-(sendKittenToParent)="addKitten($event)"></app-create-kitten>
-<h1>Listes des fucking chatons</h1>
-<ul>
-    <li *ngFor="let k of kittenList">
-        <p>{{k.name}}</p>
-        <p>{{k.race}}</p>
-        <p>{{k.dateOfBirth}}</p>
-        <img src={{k.photo}} alt={{k.name}} />
-        <button type="text">Adopter</button>
-    </li>
-    
-</ul>
+<app-create-kitten (sendKittenToParent)="addKitten($event)"></app-create-kitten>
+<div>
+  <div class="kitten-list">
+    <h1>Listes des chatons à adopter</h1>
+    <ul>
+      <li *ngFor="let k of kittenList; let i=index">
+        <p>{{ k.name }}</p>
+        <p>{{ k.race }}</p>
+        <p>{{ k.dateOfBirth }}</p>
+        <img src="{{ k.photo }}" alt="{{ k.name }}" />
+        <button type="text" (click)="AdoptKitten(i)">Adoptez moi</button>
+      </li>
+    </ul>
+  </div>
+</div>

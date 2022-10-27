@@ -1,1 +1,19 @@
-<p>user-kitten works!</p>
+<div class="kitten-main-box">
+  <app-list-kitten
+    class="app-kitten"
+    (sendKittenToAdopt)="addKitten($event)"
+  ></app-list-kitten>
+  <div class="kitten-form-list-box">
+    <h1>Mes chatons adoptés</h1>
+    <ul>
+      <li *ngFor="let k of kittenAdoptList">
+        <img src="{{ k.photo }}" alt="{{ k.name }}" />
+        <div class="kitten-info">
+          <p class="text">Nom: <span>{{ k.name }}</span></p>
+          <p class="text">Race: <span>{{ k.race }}</span></p>
+          <p class="text">Date de naissance: <span>{{ k.dateOfBirth }}</span></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

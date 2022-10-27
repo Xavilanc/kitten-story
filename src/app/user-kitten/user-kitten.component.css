@@ -1,0 +1,62 @@
+* {
+    list-style-type: none;
+}
+
+.kitten-main-box {
+    display: flex;
+}
+
+.app-kitten {
+    width: 70vw;
+}
+
+.kitten-form-list-box {
+    width: 24vw;
+    padding: 2vw;
+    margin: 1vw;
+    background-color: bisque;
+    border-radius: 15px;
+
+}
+
+li {
+    position: relative;
+}
+
+.kitten-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+}
+
+.kitten-info span {
+    color: white;
+    font-weight: lighter;
+}
+
+.kitten-info:hover {
+    opacity: 1;
+}
+
+.kitten-info .text {
+    height: 0;
+    opacity: 1;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+    margin-top: -2vh;
+    
+}
+
+img {
+    border-radius: 15px;
+}

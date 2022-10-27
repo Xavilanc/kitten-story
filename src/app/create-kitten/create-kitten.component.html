@@ -1,41 +1,44 @@
-<h1> Ajouter un chaton</h1>
-<form (ngSubmit)="myForm.valid && CreateKitten()" #myForm="ngForm">
-    <fieldset>
-        <label for="name">Nom</label>
-        <input type="text" name="name" id="name" [(ngModel)]="newKitten.name" #name="ngModel" required />
-    </fieldset>
-
-    <div *ngIf="name.invalid && name.dirty && name.touched">
-        <span *ngIf="name.errors?.['required']">Le nom est requis</span>  
-    </div>
-
-    <fieldset>
-        <label for="race">Race</label>
-        <input type="text" name="race" id="race" [(ngModel)]="newKitten.race" #race="ngModel" required />
-    </fieldset>
-
-    <div *ngIf="race.invalid && race.dirty && race.touched">
-        <span *ngIf="race.errors?.['required']">La race est requise</span>  
-    </div>
-
-    <fieldset>
-        <Label for="birth">Date de naissance</Label>
-        <input type="date" name="birth" id="birth" [(ngModel)]="newKitten.dateOfBirth" #birth="ngModel" required />
-    </fieldset>
-
-    <div *ngIf="birth.invalid && birth.dirty && birth.touched">
-        <span *ngIf="birth.errors?.['required']">La race est requise</span>  
-    </div>
-
-    <fieldset>
-        <Label for="photo">Photo</Label>
-        <input type="text" name="photo" id="photo" [(ngModel)]="newKitten.photo" #photo="ngModel" required />
-    </fieldset>
-
-    <div *ngIf="photo.invalid && photo.dirty && photo.touched">
-        <span *ngIf="photo.errors?.['required']">La photo est requise</span>  
-    </div>
-
-    <button [disabled]="myForm.invalid" type="submit">Envoyer</button>
+<div>
+    <h1> Ajouter un chaton</h1>
+    <form (ngSubmit)="myForm.valid && CreateKitten()" #myForm="ngForm">
+        <fieldset>
+            <label for="name">Nom</label>
+            <input type="text" name="name" id="name" [(ngModel)]="newKitten.name" #name="ngModel" required />
+        </fieldset>
     
-</form>
+        <div *ngIf="name.invalid && name.dirty && name.touched">
+            <span *ngIf="name.errors?.['required']">Le nom est requis</span>  
+        </div>
+    
+        <fieldset>
+            <label for="race">Race</label>
+            <input type="text" name="race" id="race" [(ngModel)]="newKitten.race" #race="ngModel" required />
+        </fieldset>
+    
+        <div *ngIf="race.invalid && race.dirty && race.touched">
+            <span *ngIf="race.errors?.['required']">La race est requise</span>  
+        </div>
+    
+        <fieldset>
+            <Label for="birth">Date de naissance</Label>
+            <input type="date" name="birth" id="birth" [(ngModel)]="newKitten.dateOfBirth" #birth="ngModel" required />
+        </fieldset>
+    
+        <div *ngIf="birth.invalid && birth.dirty && birth.touched">
+            <span *ngIf="birth.errors?.['required']">La race est requise</span>  
+        </div>
+    
+        <fieldset>
+            <Label for="photo">Photo</Label>
+            <input type="text" name="photo" id="photo" [(ngModel)]="newKitten.photo" #photo="ngModel" required />
+        </fieldset>
+    
+        <div *ngIf="photo.invalid && photo.dirty && photo.touched">
+            <span *ngIf="photo.errors?.['required']">La photo est requise</span>  
+        </div>
+    
+        <button [disabled]="myForm.invalid" type="submit">Envoyer</button>
+        
+    </form>
+    
+</div>

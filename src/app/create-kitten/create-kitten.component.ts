@@ -19,6 +19,9 @@ export class CreateKittenComponent implements OnInit {
   @Output()
   sendKittenToParent: EventEmitter<Kitten> = new EventEmitter();
 
+  @Output()
+  sendKittenToAdopt: EventEmitter<Kitten> = new EventEmitter();
+
   CreateKitten(): void {
     this.sendKittenToParent.emit(this.newKitten);
     this.newKitten = { name:"", race:"", dateOfBirth: new Date, photo:"",}

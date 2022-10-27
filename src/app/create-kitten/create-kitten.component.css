@@ -1,0 +1,29 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+    border: solid rgba(16, 128, 33, 0.965) 2px;
+    border-radius: 15px;
+    margin-bottom: 2%;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    margin-left: 25%;
+    border-radius: 15px;
+    border: none;
+    padding: 1%;
+    background-color: #127996;
+    color: white;
+}
+
+div {
+    background-color: lightgreen;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 15px;
+}
