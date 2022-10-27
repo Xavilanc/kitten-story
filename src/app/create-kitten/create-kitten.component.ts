@@ -24,6 +24,7 @@ export class CreateKittenComponent implements OnInit {
 
   CreateKitten(): void {
     this.sendKittenToParent.emit(this.newKitten);
+    this.sendKittenToAdopt.emit(this.newKitten);
     this.newKitten = { name:"", race:"", dateOfBirth: new Date, photo:"",}
   }
 
